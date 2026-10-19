@@ -8,8 +8,8 @@ st.set_page_config(page_title="Predictive Maintenance", layout="wide")
 
 @st.cache_resource
 def load_model():
-    model = joblib.load("predictive_maintenance_model.pkl")
-    features = joblib.load("model_features.pkl")
+model = joblib.load("predictive_maintenance_model_compressed.pkl")
+features = joblib.load("model_features.pkl")
     return model, features
 
 model, features = load_model()
